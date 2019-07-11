@@ -1,0 +1,39 @@
+## These events all handle the passing and losing events related to the mandate of heaven
+
+## Namespace
+
+namespace = MoH
+
+# Recive Mandate This event will give the holder the madate of heaven. this one is used for inheritence
+character_event = {
+	id = MoH.1
+	desc = {
+		text = EVTMOHDES.1
+	}
+	picture = GFX_evt_rome_restored_byzantine
+	
+	only_playable = yes
+	has_global_flag = mandate_claimed
+	trigger = {
+		has_landed_title = e_china
+		NOT ( trait = mandate_of_heaven)
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	
+	option = {
+		name = EVTMOHREP.1
+		add_trait = mandate_of_heaven
+	}
+	
+}
+
+# Transfer mandate event
+on_new_holder = {
+	events = {
+		ROOT = { character_event = { id = MoH.1 days = 1 } }
+	}
+
+}

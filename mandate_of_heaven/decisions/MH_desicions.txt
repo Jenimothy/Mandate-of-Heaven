@@ -1,0 +1,47 @@
+decisions  = {
+	
+	claim_mandate_of_heaven = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 1
+		
+		potential = {
+		
+			#Check if the ruler is an indipendent king or emporor tier vassel in de-jure china
+			NOT = { has_global_flag = mandate_claimed }
+			independent = yes
+			OR = {
+				capital_scope = {
+					region = world_north_china 
+				}
+				capital_scope = {
+					region = world_south_china  
+				}
+			}
+			OR = {
+				tier = king
+				tier = emperor
+			}
+		}
+		allow = {
+			war = no
+			prisoner = no
+			#Must be at peace, have a high prestige and piety and control specific counties in de jure china as well as having a large overall relm size, for now we will skip this check and only check relm
+			realm_size = 100
+			age = 16
+		}
+		effect = {
+			## This should be changed in the future to create the title empire of china
+			set_global_flag = mandate_claimed
+			##add_trait = mandate_of_heaven
+			narrative_event = { id = MoH.2 tooltip = EVTTOOLTIPLoR.20 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+			
+			
+			

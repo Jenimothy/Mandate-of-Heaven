@@ -1,0 +1,15 @@
+##Mandate of heaven
+mandate_of_heaven = {
+	
+	
+	prevent_decadence = yes
+	random = no
+	customizer = no
+	
+	stewardship = 1
+	vassal_opinion = 50
+	demesne_size = 5
+	global_revolt_risk = -0.5
+	monthly_character_prestige = 2
+	levy_size = 10
+}

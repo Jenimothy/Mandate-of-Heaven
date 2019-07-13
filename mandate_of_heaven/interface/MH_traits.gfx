@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_mandate_of_heaven"
+		texturefile = "gfx/traits/mandate_of_heaven.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_claim_mandate_of_heaven"
+		texturefile = "gfx/interface/decision_icon_take_mandate.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

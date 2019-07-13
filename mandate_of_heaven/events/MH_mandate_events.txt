@@ -1,0 +1,63 @@
+## These events all handle the passing and losing events related to the mandate of heaven
+
+## Namespace
+
+namespace = MH
+
+# Recive Mandate This event will give the holder the madate of heaven. this one is used for inheritence
+narrative_event = {
+	id = MH.1
+	title = EVTMOHDES.2
+	desc = {
+		text = EVTMOHDES.1
+	}
+	picture = GFX_evt_rome_restored_byzantine
+	
+	only_playable = yes
+	
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = e_china
+		has_global_flag = mandate_claimed
+	}
+	
+	option = {
+		name = EVTMOHREP.1
+		add_trait = mandate_of_heaven
+	}
+	
+}
+
+# Recive mandate, this event is used for claimig when no madate exists
+narrative_event = { 
+	id = MH.2
+	title = EVTMOHDES.2
+	
+	desc = {
+		text = EVTMOHDES.2
+		# Add mechanics for alternative start later
+	}
+	
+	picture = GFX_evt_rome_restored_byzantine
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTMOHREP.2
+		add_trait  = mandate_of_heaven
+		
+	}  
+}
+
+
+
+# Transfer mandate event
+#on_new_holder = {
+#	events = {
+#		ROOT = { character_event = { id = MoH.1 days = 1 } }
+#	}
+
+#}
+
+# Rewrite mandate recive event. This event is given to a character when they recive the mandate of heaven by desicion, based of the restore rome event

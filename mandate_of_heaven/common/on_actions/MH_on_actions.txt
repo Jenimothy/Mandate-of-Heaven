@@ -1,0 +1,5 @@
+on_new_holder = {
+	events = {
+				MH.1 #Mandate Inheritence
+		}
+	}
